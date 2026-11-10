@@ -18,12 +18,19 @@ flowchart LR
  F --> D
 ```
 
-## 两个入口
+## 目录和文件对应什么
 
-| 目录 | 包含什么 |
-| --- | --- |
-| `dataset-and-training` | 触屏拍照、识别脚本，以及采集、标注、训练和部署教程 |
-| `tracking` | MaixCAM 检测／UDP 发送、电脑 GUI、接线与 PID 调试说明 |
+| 位置 | 对应部分 | 看什么 |
+| --- | --- | --- |
+| [dataset-and-training/](dataset-and-training/README.md) | 采集与模型流程 | 触屏拍照、标注训练教程、模型识别脚本 |
+| [tracking/](tracking/README.md) | 自动追踪闭环 | 相机 UDP 坐标 → PC PID → 串口执行 |
+| [requirements.txt](requirements.txt) | 电脑端 Python 依赖 | 安装 PC GUI 使用的 pyserial |
+| [README.md](README.md) | 项目总入口 | 先看模块对应关系，再选运行路线 |
+| [VALIDATION.md](VALIDATION.md) | 检查记录 | 哪些做过语法／编译检查，哪些还需上板 |
+| [NOTICE.md](NOTICE.md) | 来源与依赖 | 平台 SDK、运行库及原有许可 |
+| [LICENSE](LICENSE) | 开源许可 | MIT 授权条款与版权署名 |
+| [.gitignore](.gitignore) | 本地文件排除规则 | 个人配置、模型、日志和编译生成物 |
+
 
 先阅读 [采集与训练入口](dataset-and-training/README.md)，或直接进入 [追踪入口](tracking/README.md)。
 
