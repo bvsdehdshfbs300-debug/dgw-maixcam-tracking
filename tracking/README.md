@@ -1,3 +1,17 @@
+## 视觉追踪文件对照
+
+| 位置 | 对应部分 | 看什么 |
+| --- | --- | --- |
+| [相机识别与UDP发送.py](maixcam%E7%AB%AF/%E5%9C%A8maixvision%E4%B8%AD%E8%BF%90%E8%A1%8C%20%20pkq_%E8%AF%86%E5%88%AB_UDP%E5%8F%91%E9%80%81.py) | 相机端 | 计算目标 dx/dy，通过 UDP 发送 TARGET／LOST |
+| [pc端GUI/GUI.py](pc%E7%AB%AFGUI/GUI.py) | 电脑控制端 | 接收坐标、显示偏差、PID 与串口命令 |
+| [docs/02_硬件准备与接线.md](docs/02_%E7%A1%AC%E4%BB%B6%E5%87%86%E5%A4%87%E4%B8%8E%E6%8E%A5%E7%BA%BF.md) | 硬件接线 | 相机、ESP32-S3 与电机的连接 |
+| [docs/05_ESP32固件与串口协议.md](docs/05_ESP32%E5%9B%BA%E4%BB%B6%E4%B8%8E%E4%B8%B2%E5%8F%A3%E5%8D%8F%E8%AE%AE.md) | 执行端协议 | 电脑到 ESP32 的 M／P 命令 |
+| [docs/06_参数调试与PID入门.md](docs/06_%E5%8F%82%E6%95%B0%E8%B0%83%E8%AF%95%E4%B8%8EPID%E5%85%A5%E9%97%A8.md) | PID 联调 | 方向、死区、增益与动作幅度 |
+
+PC 先用 dry-run 对照坐标和命令，再按原说明连接执行机构。
+
+---
+
 > **代码公开版：** 本仓库不附带模型权重或采集数据。下文涉及的 `.mud`／`.cvimodel` 文件须从你自己的训练任务导出，并按代码配置的路径部署。
 
 # 视觉追踪二维云台
